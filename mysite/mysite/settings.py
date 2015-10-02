@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
@@ -21,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # nope 
-SECRET_KEY = 'pue&9t936+@r+rk(gu7&^)$z39x-znc_wr-!!g*9xq!qs@tl4s'
+with open ("secretkey.txt", "r") as myfile:
+    SECRET_KEY = myfile.read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
